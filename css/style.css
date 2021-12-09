@@ -239,7 +239,7 @@ a {
   transition: .4s ease-in-out;
 }
 
-.pop_up .active {
+.pop_up.active {
   -webkit-transform: translateY(0%) scale(100%);
           transform: translateY(0%) scale(100%);
   background-color: rgba(0, 0, 0, 0.4);
