@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Багги | Тир</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -157,24 +157,27 @@
     <!-- section4 -->
     <section class="section4" id="section4">
         <div class="wrapper">
-            <div class="section4-wrapper">
-                <!-- Сюда карту -->
-                <div class="content">
-                    <div class="form-wrapper-back">
+
+            <!-- Сюда карту -->
+            <div class="content">
+                <div class="wrapper">
+                    <div class="wrapper-back">
                         <img src="/img/block-light.svg" alt="block">
-                        <h1 class="title-light">Получи <br> море ярких <br> эмоций!</h1>
-                        <form class="form" action="">
-                            <input type="text" name="" placeholder="Введите имя">
-                            <input type="tel" name="" placeholder="Номер телефон" id="">
-                            <input type="email" name="" placeholder="Электронная почта" id="">
-                            <button class="btn btn-form">Заказать звонок</button>
+                        <h1 class="title-light">Получи <br> море ярких<br> эмоций!</h1>
+                        <form class="form" action="send.php" method="post">
+                            <input type="text" name="fio" placeholder="Введите имя">
+                            <input type="tel" name="tel" placeholder="Номер телефон" id="">
+                            <input type="text" name="email" placeholder="Электронная почта" id="">
+                            <button class="btn btn-form" type="submit" value="отправить">Заказать звонок</button>
                         </form>
                     </div>
-                    <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16967.603078466807!2d37.981120803547!3d55.56580254617988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1abc688645963ce!2z0JDQlNCcIFJhY2V3YXkg0JzRj9GH0LrQvtCy0L4!5e1!3m2!1sru!2sru!4v1638482231149!5m2!1sru!2sru"
-                        width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy">
-                    </iframe>
+
                 </div>
+                <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d16967.603078466807!2d37.981120803547!3d55.56580254617988!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x1abc688645963ce!2z0JDQlNCcIFJhY2V3YXkg0JzRj9GH0LrQvtCy0L4!5e1!3m2!1sru!2sru!4v1638482231149!5m2!1sru!2sru"
+                    width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
             </div>
+
         </div>
 
     </section>
