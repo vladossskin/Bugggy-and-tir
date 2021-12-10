@@ -56,7 +56,9 @@
                     <img src="/img/block.svg" alt="block">
                     <h1 class="title-dark">Обучим вас <br> правильно <br> стрелять</h1>
                     <p class="description-dark">Если вы стреляете впервые, <br> у нас есть опытный инструктор, <br> который обучит вас стрелять.</p>
-                    <button class="btn btn-white btn-animated">Подробнее</button>
+                    <button class="btn btn-white btn-animated">
+                        <a href="#" id="open_pop_up">Подробнее</a>
+                     </button>
                 </div>
                 <img class="archery" src="/img/tir1.png" alt="archery">
             </div>
@@ -64,6 +66,24 @@
         </div>
 
     </section>
+
+    <!-- POPUP -->
+    <div class="pop_up" id="pop_up">
+        <div class="pop_up_container">
+            <div class="pop_up_body" id="pop_up_body">
+                <div class="pop_up_close" id="pop_up_close">&#10006</div>
+                <h2 class="pop_up_title">Индивидуальные занятия по стрельбе из традиционного лука</h2>
+                <p class="pop_up_description">
+                    - Поддержание физической формы в целом; <br> - Развитие выносливости; <br> - Улучшение кровообращения верхней части плечевого пояса, спины, груди, шеи и рук;
+                    <br> - Снабжение кислородом головного и спинного мозга, а, следовательно – улучшение их деятельности; <br> <br> <br> Занятия с детьми от 4-х лет. <br> Время занятия от 30 минут. <br> Стоимость – 1000 рублей. <br> Записаться можно по
+                    телефону <a class="pop_up_description_link" href="tel:+7(909)953-97-87">+7(909)953-97-87</a>
+                </p>
+
+            </div>
+        </div>
+    </div>
+    <!-- POPUP -->
+
     <!-- section2 -->
     <section class="section2" id="reasons">
         <div class="wrapper">
@@ -271,6 +291,8 @@
     <!-- script swiper -->
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="/script/main.js"></script>
+    <script src="/script/script.js"></script>
+    <script src="/script/popUp.js"></script>
 </body>
 
 </html>

@@ -68,17 +68,22 @@
 
     </section>
 
-
+    <!-- POPUP -->
     <div class="pop_up" id="pop_up">
         <div class="pop_up_container">
             <div class="pop_up_body" id="pop_up_body">
-                <form action="">
+                <div class="pop_up_close" id="pop_up_close">&#10006</div>
+                <h2 class="pop_up_title">Обучение езде на багги</h2>
+                <p class="pop_up_description">
+                    - занятия рассчитаны на юных пилотов с 5 летнего возраста; <br> - трасса для тренировок подбирается в зависимости от навыков ученика; <br> - приобретенные навыки пригодятся в дальнейшей повседневной жизни при вождении личного автомобиля;
+                    <br> - уроки проводятся индивидуально с каждым учеником; <br> <br> <br> Продолжительность одного занятия – от 1 часа. <br> Стоимость – 3000 рублей. <br> Записаться можно по телефону <a class="pop_up_description_link" href="tel:+7(909)953-97-87">+7(909)953-97-87</a>
+                </p>
 
-                    <div class="pop_up_close" id="pop_up_close">&#10006</div>
-                </form>
             </div>
         </div>
     </div>
+    <!-- POPUP -->
+
     <!-- section2 -->
     <section class="section2" id="reasons">
         <div class="wrapper">
@@ -112,7 +117,31 @@
                 <div class="swiper-slide">
                     <!-- Карточка товара -->
                     <div class="card">
-                        <img src="/img/card-item.svg" alt="card-item"> <br>
+                        <img src="/img/snow.jpg" alt="card-item"> <br>
+                        <h4 class="card-title">Снегоход</h4>
+                        <p class="card-description">
+                            1 пассажир
+                        </p>
+                        <p class="card-price">2000 ₽ </p>
+                        <p>будни / выходные</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <!-- Карточка товара -->
+                    <div class="card">
+                        <img src="/img/kvadr.png" alt="card-item"> <br>
+                        <h4 class="card-title">Квадроцикл</h4>
+                        <p class="card-description">
+                            1 пассажир
+                        </p>
+                        <p class="card-price">2000 ₽ </p>
+                        <p>будни / выходные</p>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <!-- Карточка товара -->
+                    <div class="card">
+                        <img src="/img/mc.jpg" alt="card-item"> <br>
                         <h4 class="card-title">MC 404</h4>
                         <p class="card-description">
                             60 см³ (5-8 лет, 2 места)
@@ -124,7 +153,7 @@
                 <div class="swiper-slide">
                     <!-- Карточка товара -->
                     <div class="card">
-                        <img src="/img/card-item.svg" alt="card-item"> <br>
+                        <img src="/img/havel.jpg" alt="card-item"> <br>
                         <h4 class="card-title">Havel</h4>
                         <p class="card-description">
                             200 см³ (8-13 лет, 1 место)
@@ -136,7 +165,7 @@
                 <div class="swiper-slide">
                     <!-- Карточка товара -->
                     <div class="card">
-                        <img src="/img/card-item.svg" alt="card-item"> <br>
+                        <img src="/img/pgo460.jpg" alt="card-item"> <br>
                         <h4 class="card-title">PGO</h4>
                         <p class="card-description">
                             460 см³ (от 13 лет, водитель и пассажир)
@@ -148,7 +177,7 @@
                 <div class="swiper-slide">
                     <!-- Карточка товара -->
                     <div class="card">
-                        <img src="/img/card-item.svg" alt="card-item"> <br>
+                        <img src="/img/pgo125.jpg" alt="card-item"> <br>
                         <h4 class="card-title">PGO</h4>
                         <p class="card-description">
                             125л.с. АКПП (взрослый, водитель и пассажир)
@@ -160,7 +189,7 @@
                 <div class="swiper-slide">
                     <!-- Карточка товара -->
                     <div class="card">
-                        <img src="/img/card-item.svg" alt="card-item"> <br>
+                        <img src="/img/buggycard.jpg" alt="card-item"> <br>
                         <h4 class="card-title">Багги</h4>
                         <p class="card-description">
                             80л.с. механика (взрослый, водитель и пассажир)
@@ -172,7 +201,7 @@
                 <div class="swiper-slide">
                     <!-- Карточка товара -->
                     <div class="card">
-                        <img src="/img/card-item.svg" alt="card-item"> <br>
+                        <img src="/img/sport.jpg" alt="card-item"> <br>
                         <h4 class="card-title">ДЗ спринт</h4>
                         <p class="card-description">
                             53л.с. механика (взрослый) спорт
@@ -193,6 +222,7 @@
                         <p>будни / выходные</p>
                     </div>
                 </div>
+
             </div>
             <div class="swiper-pagination"></div>
             <div class="swiper-button-prev"></div>
@@ -225,12 +255,7 @@
                                 <label for="formEmail" class="form__label"></label>
                                 <input id="formEmail" type="text" name="email" placeholder="Эл. почта" class="form__input _req">
                             </div>
-                            <div class="form__item">
-                                <div class="checkbox">
-                                    <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox__input">
-                                    <label for="formAgreement" class="form__label"><span>Я даю своё согласие на обработку персональных данных</span></label>
-                                </div>
-                            </div>
+
                             <button class="btn btn-form" type="submit" value="отправить">Заказать звонок</button>
                         </form>
                     </div>
