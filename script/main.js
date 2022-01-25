@@ -16,29 +16,6 @@ var swiper = new Swiper(".swiper", {
         nextEl: '.swiper-button-next',
         prevEl: '.swiper-button-prev',
     },
-    breakpoints: {
-        // when window width is >= 320px
-        320: {
-            slidesPerView: 2,
-            spaceBetween: 20
-        },
-        // when window width is >= 480px
-        480: {
-            slidesPerView: 3,
-            spaceBetween: 30
-        },
-        // when window width is >= 640px
-        640: {
-            slidesPerView: 4,
-            spaceBetween: 40
-        }
-    }
-
-    // pagination: {
-    //     el: ".swiper-pagination",
-    // },
-
-
 
 });
 
@@ -46,34 +23,19 @@ var swiper = new Swiper(".swiper", {
 var swiper = new Swiper(".swiper-container", {
     effect: "coverflow",
     grabCursor: true,
-    centeredSlides: true,
+    centeredSlides: "auto",
+    centerInsufficientSlides: false,
     slidesPerView: "auto",
-    slidesOffsetAfter: 3,
+
     coverflowEffect: {
         rotate: 0,
-        stretch: false,
-        depth: 100,
-        modifier: 5,
+        stretch: true,
+        depth: 200,
+        modifier: 1,
         slideShadows: false,
     },
-    breakpoints: {
-        // when window width is >= 320px
-        320: {
-            slidesPerView: 2,
-            spaceBetween: 20
-        },
-        // when window width is >= 480px
-        480: {
-            slidesPerView: 3,
-            spaceBetween: 30
-        },
-        // when window width is >= 640px
-        640: {
-            slidesPerView: 4,
-            spaceBetween: 40
-        }
-    }
-
-
-
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
 });

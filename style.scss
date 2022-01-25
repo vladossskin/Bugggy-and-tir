@@ -30,9 +30,10 @@ a {
 }
 
 .wrapper {
-    max-width: 1170px;
+    max-width: 1185px;
     margin: 0 auto;
     overflow: hidden;
+    padding: 0 15px;
 }
 
 .navbar {
@@ -48,6 +49,9 @@ a {
         &-link {
             text-decoration: none;
             color: $white;
+            &-small {
+                display: none;
+            }
         }
     }
     &-logo {
@@ -55,9 +59,41 @@ a {
     }
 }
 
+ul {
+    list-style-type: none;
+}
+
+.menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 60px;
+    border-radius: 6px;
+    line-height: 40px;
+    z-index: 99;
+}
+
+.menu:active {
+    color: $accent;
+}
+
+.show-menu {
+    display: block;
+    margin: 0;
+    padding: 6px 13px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
 .navbar-phone-link:hover {
     color: $accent;
     transition: ease 0.5s;
+}
+
+.menu-open {
+    display: none;
+    background: none;
+    border: none;
+    margin: 25px 0 0;
 }
 
 .nav-link {
@@ -76,7 +112,7 @@ a {
     list-style-type: none;
     box-sizing: inherit;
     &-item {
-        margin-right: 54px;
+        // margin-right: 54px;
         color: $white;
         padding: 7px 5px;
     }
@@ -92,7 +128,11 @@ a {
     }
 }
 
-// NAVBAR
+.nav-item:not(:last-child) {
+    margin-right: 54px;
+}
+
+// NAVBAR-----------------------------------------------------------------------------------
 .main-tir {
     text-align: center;
 }
@@ -167,13 +207,8 @@ a {
 }
 
 .education {
-    position: absolute;
+    height: 250px;
     right: 100px;
-    margin-right: 200px;
-    &-tir {
-        position: absolute;
-        margin-left: 300px;
-    }
 }
 
 // POPUP--------------------------------------------------------------------------------
@@ -235,13 +270,9 @@ a {
 }
 
 // POPUP--------------------------------------------------------------------------------
-.archery {
-    position: relative;
-    left: 680px;
-}
-
 .forestBuggy {
-    margin-left: 100px;
+    margin-right: 50px;
+    margin-left: 200px;
 }
 
 .education .title-dark {
@@ -264,7 +295,6 @@ a {
 
 .section2 {
     background-color: $accent;
-    height: 550px;
 }
 
 .section2 .wrapper .title-light {
@@ -305,9 +335,9 @@ a {
     margin: 30px 0 30px;
 }
 
-// Карточка товара
+// Карточка товара--------------------------------------------------------------------------------------------------------------------------------------------
 .card {
-    width: 300px;
+    width: 515px;
     height: 475px;
     background-color: #fff;
     border-radius: 30px;
@@ -339,7 +369,7 @@ a {
     padding: 120px 0;
 }
 
-// SWIPER
+// SWIPER----------------------------------------------------------------------------------
 .swiper {
     width: 100%;
     padding-top: 50px;
@@ -349,7 +379,7 @@ a {
 .swiper-slide {
     background-position: center;
     background-size: cover;
-    width: 300px;
+    width: 500px;
     height: 430px;
 }
 
@@ -363,10 +393,17 @@ a {
     color: $accent;
 }
 
+.white {
+    color: #FFFFFF;
+}
+
 .swiper-container {
-    box-sizing: border-box;
     width: 100%;
     overflow: hidden;
+}
+
+.element.style {
+    margin-right: -103px;
 }
 
 .section3 {
@@ -375,6 +412,7 @@ a {
 
 .wrapper-back {
     background-color: $accent;
+    width: 100%;
     padding: 40px 550px 0 30px;
     border-radius: 6px;
 }
@@ -384,6 +422,8 @@ a {
     margin-top: 126px;
     right: 120px;
     border-radius: 6px;
+    width: 500px;
+    height: 500px;
 }
 
 input {
@@ -511,4 +551,194 @@ label>span {
 
 .title-position img:hover {
     cursor: pointer;
+}
+
+@media screen and (max-width: 1200px) {
+    .wrapper {
+        width: 1140px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .wrapper {
+        width: 960px;
+    }
+    .content {
+        justify-content: space-between;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .wrapper {
+        width: 725px;
+    }
+    .nav-item:not(:last-child) {
+        margin-right: 30px;
+    }
+    .navbar-phone-link {
+        display: none;
+    }
+    .navbar-phone-link-small {
+        display: block;
+        margin: 5px 0 0 0;
+        margin-right: -30px;
+    }
+    .forestBuggy {
+        margin-right: 50px;
+        margin-left: 0;
+    }
+    .map {
+        position: absolute;
+        margin-top: 100px;
+        right: -11px;
+        border-radius: 6px;
+        width: 415px;
+        height: 400px;
+    }
+    .footer-position {
+        display: flex;
+        justify-content: space-between;
+    }
+    .contacts {
+        margin-left: 30px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .wrapper {
+        width: 532px;
+    }
+    .navbar-phone-link {
+        display: block;
+    }
+    .nav {
+        display: none;
+    }
+    .navbar-phone-link-small {
+        display: none;
+    }
+    .menu-open {
+        display: block;
+    }
+    .forestBuggy {
+        width: 300px;
+    }
+    .archery {
+        width: 215px;
+    }
+    .education .title-dark {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    .education-tir .title-dark {
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    .education .description-dark {
+        font-size: 10px;
+        line-height: 15px;
+    }
+    .education-tir .description-dark {
+        font-size: 10px;
+        line-height: 15px;
+    }
+    .btn {
+        padding: 6px 15px;
+        font-size: 10px;
+        margin-bottom: 150px;
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        display: none;
+    }
+    .map {
+        display: none;
+    }
+    .btn-form {
+        background-color: #fff;
+        height: 100%;
+        width: 100%;
+        color: black;
+        border-radius: 6px;
+        margin-bottom: 75px;
+    }
+    .wrapper-back {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .footer-position {
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .wrapper {
+        width: 100%;
+        padding: 0 15px;
+    }
+    .forestBuggy {
+        width: 200px;
+        margin-right: 0;
+    }
+    .education .description-dark {
+        margin-bottom: 18px;
+    }
+    .navbar-phone-link {
+        display: none;
+    }
+    .reasons {
+        flex-direction: column;
+    }
+    .reasons-item:nth-child(2) {
+        margin: 0;
+    }
+    .reasons-item:nth-child(2) {
+        margin-top: 0;
+    }
+    .reasons-item-tir:last-child {
+        margin-top: 0;
+    }
+    .swiper-button-next:after,
+    .swiper-button-prev:after {
+        display: block;
+    }
+    .swiper-button-prev {
+        margin: 0;
+    }
+    .swiper-button-next {
+        margin: 0;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .forestBuggy {
+        width: 150px;
+        margin-right: 0;
+    }
+    .education .title-dark {
+        font-size: 15px;
+        margin: 15px 0;
+    }
+    .education .description-dark {
+        font-size: 8px;
+        line-height: 12px;
+        margin: 8px 0 12px;
+    }
+    .btn {
+        padding: 6px 15px;
+        font-size: 12px;
+        margin-bottom: 120px;
+    }
+    .education {
+        height: 200px;
+    }
+    .footer-bg {
+        padding: 30px 0;
+    }
+    .btn-form {
+        margin-bottom: 40px;
+    }
 }
