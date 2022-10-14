@@ -69,8 +69,8 @@
                     <img src="/img/block.svg" alt="block">
                     <h1 class="title-dark">Обучим вас <br> правильно <br> стрелять</h1>
                     <p class="description-dark">Если вы стреляете впервые, <br> у нас есть опытный инструктор, <br> который обучит вас стрелять.</p>
-                    <button class="btn btn-white btn-animated">
-                        <a href="#" id="open_pop_up">Подробнее</a>
+                    <button class="btn btn-white btn-animated" id="open_pop_up">
+                        <a href="#">Подробнее</a>
                      </button>
                 </div>
                 <img class="archery" src="/img/tir1.png" alt="archery">
@@ -84,11 +84,11 @@
     <div class="pop_up" id="pop_up">
         <div class="pop_up_container">
             <div class="pop_up_body" id="pop_up_body">
-                <div class="pop_up_close" id="pop_up_close">&#10006</div>
+                <div class="pop_up_close" id="pop_up_close">&#10006;</div>
                 <h2 class="pop_up_title">Индивидуальные занятия по стрельбе из традиционного лука</h2>
                 <p class="pop_up_description">
                     - Поддержание физической формы в целом; <br> - Развитие выносливости; <br> - Улучшение кровообращения верхней части плечевого пояса, спины, груди, шеи и рук;
-                    <br> - Снабжение кислородом головного и спинного мозга, а, следовательно – улучшение их деятельности; <br> <br> <br> Занятия с детьми от 4-х лет. <br> Время занятия от 30 минут. <br> Стоимость – 1200 рублей. <br> Записаться можно по
+                    <br> - Снабжение кислородом головного и спинного мозга, а, следовательно – улучшение их деятельности; <br> <br> <br> Занятия с детьми от 4-х лет. <br> Время занятия от 30 минут. <br> Стоимость – 1500 рублей. <br> Записаться можно по
                     телефону <a class="pop_up_description_link" href="tel:+7(909)953-97-87">+7(909)953-97-87</a>
                 </p>
 
@@ -171,9 +171,9 @@
                         <img src="/img/archer-rent.jpg" alt="">
                         <h4 class="card-title">Аренда лучной дорожки</h4>
                         <p class="card-description">
-                            Занятие с инструктором
+                            Занятие с инструктором <br> 30 минут
                         </p>
-                        <p class="card-price">1200 ₽ </p>
+                        <p class="card-price">1500 ₽ </p>
 
                     </div>
                 </div>
@@ -203,22 +203,26 @@
                     <div class="wrapper-back">
                         <img src="/img/block-light.svg" alt="block">
                         <h1 class="title-light">Получи <br> море ярких <br> эмоций!</h1>
-                        <form class="form__body" action="#" id="form" method="post">
+
+
+                        <form class="form__body" action="sender.php" id="form" method="post">
                             <div class="form__item">
                                 <label for="formName" class="form__label"></label>
-                                <input id="formName" type="text" name="name" placeholder="Введите имя" class="form__input _req">
+                                <input type="text" name="name" placeholder="Введите имя" class="form__input _req" required>
                             </div>
                             <div class="form__item">
                                 <label for="formTel" class="form__label"></label>
-                                <input id="formTel" type="text" name="tel" placeholder="Номер телефон" class="form__input _req ">
+                                <input type="text" name="phone" placeholder="Номер телефон" class="form__input _req " required>
                             </div>
                             <div class="form__item">
                                 <label for="formEmail" class="form__label"></label>
-                                <input id="formEmail" type="text" name="email" placeholder="Эл. почта" class="form__input _req">
+                                <input type="email" name="email" placeholder="Эл. почта" class="form__input _req" required>
                             </div>
 
-                            <button class="btn btn-form" type="submit" value="отправить">Заказать звонок</button>
+                            <button class="btn btn-form" type="button" value="отправить">Заказать звонок</button>
                         </form>
+
+
                     </div>
 
                 </div>

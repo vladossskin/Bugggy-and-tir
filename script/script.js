@@ -1,77 +1,28 @@
-"use strict"
+jQuery(document).ready(function() {
 
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('form');
-    form.addEventListener('submit', formSend);
+    $(".phone").mask("+7 (999) 999-99-99");
 
-    async function formSend(e) {
-        e.preventDefault();
 
-        let error = formValidate(form);
+    jQuery('form button').click(function() {
+        var form = jQuery(this).closest('.form');
 
-        if (error === 0) {
-            form.classList.add('_sending');
-            let response = await fetch('sendmail.php', {
-                method: 'POST',
-                body: FormData
+        if (form.valid()) {
+            var actUrl = form.attr('action');
+
+            jQuery.ajax({
+                url: actUrl,
+                type: 'post',
+                dataType: 'html',
+                data: form.serialize(),
+                success: function(data) {
+                    //form.html(data);
+                    //form.css('opacity', '1');
+                    form.find('.status').html('форма отправлена успешно');
+                },
+                error: function() {
+                    form.find('.status').html('серверная ошибка');
+                }
             });
-            if (response.ok) {
-                let result = await response.json();
-                alert(result.message);
-                formPrewiew.innerHTML = '';
-                form.reset();
-                form.classList.remove('_sending')
-            } else {
-                alert("Ошибка")
-                form.classList.remove('_sending')
-            }
-        } else {
-            alert('Заполните обязательные поля');
         }
-
-    }
-
-    function formValidate(form) {
-        let error = 0;
-        let formReq = document.querySelectorAll('._req')
-
-        for (let index = 0; index < formReq.length; index++) {
-            const input = formReq[index];
-            formRemoveError(input);
-
-
-            if (input.classList.contains('_email')) {
-                if (emailTest(input)) {
-                    formAddError(input);
-                    error++;
-                }
-            } else if (input.getAttribute("type") === "checkbox" && input.checked === false) {
-                formAddError(input);
-                error++;
-            } else {
-                if (input.value === '') {
-                    formAddError(input);
-                    error++;
-                }
-            }
-
-        }
-        return error;
-
-    }
-
-    function formAddError(input) {
-        input.parentElement.classList.add('_error');
-        input.classList.add('_error');
-    };
-
-    function formRemoveError(input) {
-        input.parentElement.classList.remove('_error');
-        input.classList.remove('_error');
-    };
-    // Функция теста мыла
-    function emailTest(input) {
-        return !/^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(input.value);
-    }
-
+    });
 });

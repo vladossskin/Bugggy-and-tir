@@ -5,6 +5,10 @@ $grey: #605E5E;
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
 }
@@ -132,6 +136,10 @@ ul {
     margin-right: 54px;
 }
 
+.burger {
+    width: 30px;
+}
+
 // NAVBAR-----------------------------------------------------------------------------------
 .main-tir {
     text-align: center;
@@ -144,9 +152,15 @@ ul {
 }
 
 .description {
+    display: block;
+    max-width: 400px;
     color: $white;
     line-height: 24px;
     margin-bottom: 70px;
+}
+
+.main-tir .description {
+    margin: auto;
 }
 
 .btn {
@@ -199,18 +213,23 @@ ul {
 }
 
 .content {
-    display: flex;
+    display: -webkit-box;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
-    position: relative;
-    margin-bottom: 80px;
+    padding: 0 218px;
     max-width: 1170px;
 }
 
-.education {
-    height: 250px;
-    right: 100px;
-}
-
+// Здесь я сделал правильное позиционирование, но нужно еще разобраться, что здесь  лишнее
+// А еще нужно сделать адаптив страницы
+// .education {
+//     height: 250px;
+//     right: 100px;
+// }
+// .section1 {
+//     margin-bottom: 65px;
+// }
 // POPUP--------------------------------------------------------------------------------
 .pop_up {
     width: 100%;
@@ -270,11 +289,6 @@ ul {
 }
 
 // POPUP--------------------------------------------------------------------------------
-.forestBuggy {
-    margin-right: 50px;
-    margin-left: 200px;
-}
-
 .education .title-dark {
     margin: 35px 0 35px 0;
 }
@@ -283,9 +297,16 @@ ul {
     margin: 35px 0 35px 0;
 }
 
+.forestBuggy {
+    margin-right: 50px;
+}
+
 .education .description-dark {
-    margin-bottom: 50px;
-    line-height: 25px;
+    display: block;
+    max-width: 250px;
+    font-size: 14px;
+    line-height: 1.5;
+    text-align: justify;
 }
 
 .education-tir .description-dark {
@@ -298,7 +319,6 @@ ul {
 }
 
 .section2 .wrapper .title-light {
-    padding-top: 30px;
     text-align: center;
 }
 
@@ -415,6 +435,7 @@ ul {
     width: 100%;
     padding: 40px 550px 0 30px;
     border-radius: 6px;
+    margin-bottom: 100px;
 }
 
 .map {
@@ -477,6 +498,7 @@ input:-ms-input-placeholder {
     background-color: #fff;
     padding: 10px 32px;
     height: 100%;
+    width: 236px;
     color: black;
     border-radius: 6px;
     margin-bottom: 75px;
@@ -565,12 +587,32 @@ label>span {
     }
     .content {
         justify-content: space-between;
+        padding: 0 100px;
+    }
+    .forestBuggy {
+        margin-right: 50px;
+        margin-left: 0;
+    }
+    .education .description-dark {
+        font-size: 14px;
+        line-height: 1.5;
+    }
+    .education {
+        width: 201px;
+    }
+    .map {
+        right: 53px;
     }
 }
 
 @media screen and (max-width: 991px) {
     .wrapper {
         width: 725px;
+    }
+    .content {
+        justify-content: space-between;
+        padding: 0;
+        margin-bottom: 60px;
     }
     .nav-item:not(:last-child) {
         margin-right: 30px;
@@ -587,13 +629,17 @@ label>span {
         margin-right: 50px;
         margin-left: 0;
     }
+    .education .description-dark {
+        font-size: 14px;
+        line-height: 1.5;
+    }
     .map {
         position: absolute;
-        margin-top: 100px;
-        right: -11px;
+        margin-top: 137px;
+        right: 25px;
         border-radius: 6px;
-        width: 415px;
-        height: 400px;
+        width: 400px;
+        height: 430px;
     }
     .footer-position {
         display: flex;
@@ -617,14 +663,26 @@ label>span {
     .navbar-phone-link-small {
         display: none;
     }
+    .block_img {
+        display: block;
+        margin: 0 auto;
+    }
+    .main .description {
+        text-align: justify;
+        margin: 0 auto;
+    }
     .menu-open {
         display: block;
     }
     .forestBuggy {
-        width: 300px;
+        width: 250px;
     }
     .archery {
         width: 215px;
+    }
+    .education .description-dark {
+        font-size: 14px;
+        line-height: 1.5;
     }
     .education .title-dark {
         font-size: 20px;
@@ -634,18 +692,15 @@ label>span {
         font-size: 20px;
         margin: 20px 0;
     }
-    .education .description-dark {
-        font-size: 10px;
-        line-height: 15px;
-    }
     .education-tir .description-dark {
         font-size: 10px;
         line-height: 15px;
     }
     .btn {
-        padding: 6px 15px;
-        font-size: 10px;
-        margin-bottom: 150px;
+        display: block;
+        padding: 10px 28px;
+        font-size: 14px;
+        margin: 30px auto;
     }
     .swiper-button-next:after,
     .swiper-button-prev:after {
@@ -661,6 +716,11 @@ label>span {
         color: black;
         border-radius: 6px;
         margin-bottom: 75px;
+        padding: 15px;
+        font-size: 16px;
+    }
+    .title-light {
+        text-align: center;
     }
     .wrapper-back {
         display: flex;
@@ -680,8 +740,7 @@ label>span {
         padding: 0 15px;
     }
     .forestBuggy {
-        width: 200px;
-        margin-right: 0;
+        display: non;
     }
     .education .description-dark {
         margin-bottom: 18px;
@@ -701,6 +760,9 @@ label>span {
     .reasons-item-tir:last-child {
         margin-top: 0;
     }
+    .description {
+        margin: 40px auto
+    }
     .swiper-button-next:after,
     .swiper-button-prev:after {
         display: block;
@@ -713,32 +775,105 @@ label>span {
     }
 }
 
-@media screen and (max-width: 400px) {
+@media screen and (max-width: 520px) {
     .forestBuggy {
-        width: 150px;
-        margin-right: 0;
+        display: none;
     }
     .education .title-dark {
-        font-size: 15px;
-        margin: 15px 0;
+        font-size: 18px;
+        margin: 18px 0;
+        text-align: center;
     }
-    .education .description-dark {
-        font-size: 8px;
-        line-height: 12px;
-        margin: 8px 0 12px;
-    }
-    .btn {
-        padding: 6px 15px;
-        font-size: 12px;
-        margin-bottom: 120px;
+    .content {
+        margin: 0 auto;
+        padding: 0 0 50px 0;
+        align-content: center;
     }
     .education {
-        height: 200px;
+        display: flex;
+        flex-direction: column;
+    }
+    .education_block_img {
+        display: block;
+        margin: 0 auto;
+        width: 30px;
+    }
+    .education .description-dark {
+        text-align: justify;
+        font-size: 14px;
+        line-height: 1.3;
+        margin: 8px 0 52px;
+    }
+    .btn {
+        padding: 10px 28px;
+        font-size: 14px;
+        display: block;
+        margin: 70px auto;
+    }
+    .education {
+        height: 299px;
+        align-content: center;
+        margin: 0 auto;
+    }
+    .education .btn {
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .forestBuggy {
+        display: none;
+    }
+    .education .title-dark {
+        font-size: 18px;
+        margin: 18px 0;
+        text-align: center;
+    }
+    .content {
+        margin: 0 auto;
+        padding: 0 0 50px 0;
+        align-content: center;
+    }
+    .education {
+        display: flex;
+        flex-direction: column;
+    }
+    .education_block_img {
+        display: block;
+        margin: 0 auto;
+        width: 30px;
+    }
+    .education .description-dark {
+        text-align: justify;
+        font-size: 14px;
+        line-height: 1.3;
+        margin: 8px 0 52px;
+    }
+    .btn {
+        padding: 10px 28px;
+        font-size: 14px;
+        display: block;
+        margin: 70px auto;
+    }
+    .education {
+        height: 299px;
+        align-content: center;
+        margin: 0 auto;
+    }
+    .education .btn {
+        margin: 0 auto;
     }
     .footer-bg {
         padding: 30px 0;
     }
     .btn-form {
         margin-bottom: 40px;
+    }
+    .block_img {
+        display: block;
+        margin: 0 auto;
+    }
+    .main .description {
+        text-align: justify;
     }
 }
