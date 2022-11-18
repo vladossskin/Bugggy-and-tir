@@ -21,11 +21,9 @@ a {
 .page {
     background: url(/img/bg.png) no-repeat;
     background-size: cover;
-    margin-bottom: 80px;
     &-tir {
         background: url(/img/bg-tir.png) no-repeat;
         background-size: cover;
-        margin-bottom: 80px;
     }
 }
 
@@ -97,7 +95,7 @@ ul {
     display: none;
     background: none;
     border: none;
-    margin: 25px 0 0;
+    margin-top: 25px;
 }
 
 .nav-link {
@@ -107,7 +105,7 @@ ul {
 
 .nav-item .active {
     border-bottom: 2px solid $accent;
-    padding: 5px 5px;
+    padding: 5px;
 }
 
 .nav {
@@ -116,7 +114,6 @@ ul {
     list-style-type: none;
     box-sizing: inherit;
     &-item {
-        // margin-right: 54px;
         color: $white;
         padding: 7px 5px;
     }
@@ -168,9 +165,9 @@ ul {
     background-color: $accent;
     border-radius: 30px;
     color: $white;
-    margin-bottom: 226px;
     cursor: pointer;
     border: 1px solid transparent;
+    margin-bottom: 70px
 }
 
 .btn:link,
@@ -178,7 +175,6 @@ ul {
     padding: 15px 40px;
     display: inline-block;
     transition: all .2s;
-    position: absolute;
 }
 
 .btn:hover {
@@ -213,23 +209,12 @@ ul {
 }
 
 .content {
-    display: -webkit-box;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
+    display: flex;
     justify-content: space-between;
     padding: 0 218px;
     max-width: 1170px;
 }
 
-// Здесь я сделал правильное позиционирование, но нужно еще разобраться, что здесь  лишнее
-// А еще нужно сделать адаптив страницы
-// .education {
-//     height: 250px;
-//     right: 100px;
-// }
-// .section1 {
-//     margin-bottom: 65px;
-// }
 // POPUP--------------------------------------------------------------------------------
 .pop_up {
     width: 100%;
@@ -290,11 +275,11 @@ ul {
 
 // POPUP--------------------------------------------------------------------------------
 .education .title-dark {
-    margin: 35px 0 35px 0;
+    margin: 35px 0;
 }
 
 .education-tir .title-dark {
-    margin: 35px 0 35px 0;
+    margin: 35px 0;
 }
 
 .forestBuggy {
@@ -352,7 +337,7 @@ ul {
 }
 
 .section3 img {
-    margin: 30px 0 30px;
+    margin: 30px 0;
 }
 
 // Карточка товара--------------------------------------------------------------------------------------------------------------------------------------------
@@ -524,7 +509,7 @@ input:-ms-input-placeholder {
 
 .footer-bg {
     background-color: $grey;
-    padding: 40px 40px;
+    padding: 40px;
 }
 
 .footer-position {
@@ -567,6 +552,10 @@ label>span {
     display: block;
 }
 
+.gallery-title {
+    text-align: center;
+}
+
 .title-position img {
     margin-right: 20px;
 }
@@ -575,305 +564,299 @@ label>span {
     cursor: pointer;
 }
 
-@media screen and (max-width: 1200px) {
-    .wrapper {
-        width: 1140px;
-    }
-}
-
-@media screen and (max-width: 1199px) {
-    .wrapper {
-        width: 960px;
-    }
-    .content {
-        justify-content: space-between;
-        padding: 0 100px;
-    }
-    .forestBuggy {
-        margin-right: 50px;
-        margin-left: 0;
-    }
-    .education .description-dark {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-    .education {
-        width: 201px;
-    }
-    .map {
-        right: 53px;
-    }
-}
-
-@media screen and (max-width: 991px) {
-    .wrapper {
-        width: 725px;
-    }
-    .content {
-        justify-content: space-between;
-        padding: 0;
-        margin-bottom: 60px;
-    }
-    .nav-item:not(:last-child) {
-        margin-right: 30px;
-    }
-    .navbar-phone-link {
-        display: none;
-    }
-    .navbar-phone-link-small {
-        display: block;
-        margin: 5px 0 0 0;
-        margin-right: -30px;
-    }
-    .forestBuggy {
-        margin-right: 50px;
-        margin-left: 0;
-    }
-    .education .description-dark {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-    .map {
-        position: absolute;
-        margin-top: 137px;
-        right: 25px;
-        border-radius: 6px;
-        width: 400px;
-        height: 430px;
-    }
-    .footer-position {
-        display: flex;
-        justify-content: space-between;
-    }
-    .contacts {
-        margin-left: 30px;
-    }
-}
-
-@media screen and (max-width: 767px) {
-    .wrapper {
-        width: 532px;
-    }
-    .navbar-phone-link {
-        display: block;
-    }
-    .nav {
-        display: none;
-    }
-    .navbar-phone-link-small {
-        display: none;
-    }
-    .block_img {
-        display: block;
-        margin: 0 auto;
-    }
-    .main .description {
-        text-align: justify;
-        margin: 0 auto;
-    }
-    .menu-open {
-        display: block;
-    }
-    .forestBuggy {
-        width: 250px;
-    }
-    .archery {
-        width: 215px;
-    }
-    .education .description-dark {
-        font-size: 14px;
-        line-height: 1.5;
-    }
-    .education .title-dark {
-        font-size: 20px;
-        margin: 20px 0;
-    }
-    .education-tir .title-dark {
-        font-size: 20px;
-        margin: 20px 0;
-    }
-    .education-tir .description-dark {
-        font-size: 10px;
-        line-height: 15px;
-    }
-    .btn {
-        display: block;
-        padding: 10px 28px;
-        font-size: 14px;
-        margin: 30px auto;
-    }
-    .swiper-button-next:after,
-    .swiper-button-prev:after {
-        display: none;
-    }
-    .map {
-        display: none;
-    }
-    .btn-form {
-        background-color: #fff;
-        height: 100%;
-        width: 100%;
-        color: black;
-        border-radius: 6px;
-        margin-bottom: 75px;
-        padding: 15px;
-        font-size: 16px;
-    }
-    .title-light {
-        text-align: center;
-    }
-    .wrapper-back {
-        display: flex;
-        flex-direction: column;
-        padding: 30px;
-        align-items: center;
-        flex-wrap: wrap;
-    }
-    .footer-position {
-        flex-wrap: wrap;
-    }
-}
-
-@media screen and (max-width: 575px) {
-    .wrapper {
-        width: 100%;
-        padding: 0 15px;
-    }
-    .forestBuggy {
-        display: non;
-    }
-    .education .description-dark {
-        margin-bottom: 18px;
-    }
-    .navbar-phone-link {
-        display: none;
-    }
-    .reasons {
-        flex-direction: column;
-    }
-    .reasons-item:nth-child(2) {
-        margin: 0;
-    }
-    .reasons-item:nth-child(2) {
-        margin-top: 0;
-    }
-    .reasons-item-tir:last-child {
-        margin-top: 0;
-    }
-    .description {
-        margin: 40px auto
-    }
-    .swiper-button-next:after,
-    .swiper-button-prev:after {
-        display: block;
-    }
-    .swiper-button-prev {
-        margin: 0;
-    }
-    .swiper-button-next {
-        margin: 0;
-    }
-}
-
-@media screen and (max-width: 520px) {
-    .forestBuggy {
-        display: none;
-    }
-    .education .title-dark {
-        font-size: 18px;
-        margin: 18px 0;
-        text-align: center;
-    }
-    .content {
-        margin: 0 auto;
-        padding: 0 0 50px 0;
-        align-content: center;
-    }
-    .education {
-        display: flex;
-        flex-direction: column;
-    }
-    .education_block_img {
-        display: block;
-        margin: 0 auto;
-        width: 30px;
-    }
-    .education .description-dark {
-        text-align: justify;
-        font-size: 14px;
-        line-height: 1.3;
-        margin: 8px 0 52px;
-    }
-    .btn {
-        padding: 10px 28px;
-        font-size: 14px;
-        display: block;
-        margin: 70px auto;
-    }
-    .education {
-        height: 299px;
-        align-content: center;
-        margin: 0 auto;
-    }
-    .education .btn {
-        margin: 0 auto;
-    }
-}
-
-@media screen and (max-width: 400px) {
-    .forestBuggy {
-        display: none;
-    }
-    .education .title-dark {
-        font-size: 18px;
-        margin: 18px 0;
-        text-align: center;
-    }
-    .content {
-        margin: 0 auto;
-        padding: 0 0 50px 0;
-        align-content: center;
-    }
-    .education {
-        display: flex;
-        flex-direction: column;
-    }
-    .education_block_img {
-        display: block;
-        margin: 0 auto;
-        width: 30px;
-    }
-    .education .description-dark {
-        text-align: justify;
-        font-size: 14px;
-        line-height: 1.3;
-        margin: 8px 0 52px;
-    }
-    .btn {
-        padding: 10px 28px;
-        font-size: 14px;
-        display: block;
-        margin: 70px auto;
-    }
-    .education {
-        height: 299px;
-        align-content: center;
-        margin: 0 auto;
-    }
-    .education .btn {
-        margin: 0 auto;
-    }
-    .footer-bg {
-        padding: 30px 0;
-    }
-    .btn-form {
-        margin-bottom: 40px;
-    }
-    .block_img {
-        display: block;
-        margin: 0 auto;
-    }
-    .main .description {
-        text-align: justify;
-    }
-}
+// @media screen and (max-width: 1200px) {
+//     .wrapper {
+//         width: 1140px;
+//     }
+// }
+// @media screen and (max-width: 1199px) {
+//     .wrapper {
+//         width: 960px;
+//     }
+//     .content {
+//         justify-content: space-between;
+//         padding: 0 100px;
+//     }
+//     .forestBuggy {
+//         margin-right: 50px;
+//         margin-left: 0;
+//     }
+//     .education .description-dark {
+//         font-size: 14px;
+//         line-height: 1.5;
+//     }
+//     .education {
+//         width: 201px;
+//     }
+//     .map {
+//         right: 53px;
+//     }
+// }
+// @media screen and (max-width: 991px) {
+//     .wrapper {
+//         width: 725px;
+//     }
+//     .content {
+//         justify-content: space-between;
+//         padding: 0;
+//         margin-bottom: 60px;
+//     }
+//     .nav-item:not(:last-child) {
+//         margin-right: 30px;
+//     }
+//     .navbar-phone-link {
+//         display: none;
+//     }
+//     .navbar-phone-link-small {
+//         display: block;
+//         margin: 5px 0 0 0;
+//         margin-right: -30px;
+//     }
+//     .forestBuggy {
+//         margin-right: 50px;
+//         margin-left: 0;
+//     }
+//     .education .description-dark {
+//         font-size: 14px;
+//         line-height: 1.5;
+//     }
+//     .map {
+//         position: absolute;
+//         margin-top: 137px;
+//         right: 25px;
+//         border-radius: 6px;
+//         width: 400px;
+//         height: 430px;
+//     }
+//     .footer-position {
+//         display: flex;
+//         justify-content: space-between;
+//     }
+//     .contacts {
+//         margin-left: 30px;
+//     }
+// }
+// @media screen and (max-width: 767px) {
+//     .wrapper {
+//         width: 532px;
+//     }
+//     .navbar-phone-link {
+//         display: block;
+//     }
+//     .nav {
+//         display: none;
+//     }
+//     .navbar-phone-link-small {
+//         display: none;
+//     }
+//     .block_img {
+//         display: block;
+//         margin: 0 auto;
+//     }
+//     .main .description {
+//         text-align: justify;
+//         margin: 0 auto;
+//     }
+//     .menu-open {
+//         display: block;
+//     }
+//     .forestBuggy {
+//         width: 250px;
+//     }
+//     .archery {
+//         width: 215px;
+//     }
+//     .education .description-dark {
+//         font-size: 14px;
+//         line-height: 1.5;
+//     }
+//     .education .title-dark {
+//         font-size: 20px;
+//         margin: 20px 0;
+//     }
+//     .education-tir .title-dark {
+//         font-size: 20px;
+//         margin: 20px 0;
+//     }
+//     .education-tir .description-dark {
+//         font-size: 10px;
+//         line-height: 15px;
+//     }
+//     .btn {
+//         display: block;
+//         padding: 10px 28px;
+//         font-size: 14px;
+//         margin: 30px auto;
+//     }
+//     .swiper-button-next:after,
+//     .swiper-button-prev:after {
+//         display: none;
+//     }
+//     .map {
+//         display: none;
+//     }
+//     .btn-form {
+//         background-color: #fff;
+//         height: 100%;
+//         width: 100%;
+//         color: black;
+//         border-radius: 6px;
+//         margin-bottom: 75px;
+//         padding: 15px;
+//         font-size: 16px;
+//     }
+//     .title-light {
+//         text-align: center;
+//     }
+//     .wrapper-back {
+//         display: flex;
+//         flex-direction: column;
+//         padding: 30px;
+//         align-items: center;
+//         flex-wrap: wrap;
+//     }
+//     .footer-position {
+//         flex-wrap: wrap;
+//     }
+// }
+// @media screen and (max-width: 575px) {
+//     .wrapper {
+//         width: 100%;
+//         padding: 0 15px;
+//     }
+//     .forestBuggy {
+//         display: non;
+//     }
+//     .education .description-dark {
+//         margin-bottom: 18px;
+//     }
+//     .navbar-phone-link {
+//         display: none;
+//     }
+//     .reasons {
+//         flex-direction: column;
+//     }
+//     .reasons-item:nth-child(2) {
+//         margin: 0;
+//     }
+//     .reasons-item:nth-child(2) {
+//         margin-top: 0;
+//     }
+//     .reasons-item-tir:last-child {
+//         margin-top: 0;
+//     }
+//     .description {
+//         margin: 40px auto
+//     }
+//     .swiper-button-next:after,
+//     .swiper-button-prev:after {
+//         display: block;
+//     }
+//     .swiper-button-prev {
+//         margin: 0;
+//     }
+//     .swiper-button-next {
+//         margin: 0;
+//     }
+// }
+// @media screen and (max-width: 520px) {
+//     .forestBuggy {
+//         display: none;
+//     }
+//     .education .title-dark {
+//         font-size: 18px;
+//         margin: 18px 0;
+//         text-align: center;
+//     }
+//     .content {
+//         margin: 0 auto;
+//         padding: 0 0 50px 0;
+//         align-content: center;
+//     }
+//     .education {
+//         display: flex;
+//         flex-direction: column;
+//     }
+//     .education_block_img {
+//         display: block;
+//         margin: 0 auto;
+//         width: 30px;
+//     }
+//     .education .description-dark {
+//         text-align: justify;
+//         font-size: 14px;
+//         line-height: 1.3;
+//         margin: 8px 0 52px;
+//     }
+//     .btn {
+//         padding: 10px 28px;
+//         font-size: 14px;
+//         display: block;
+//         margin: 70px auto;
+//     }
+//     .education {
+//         height: 299px;
+//         align-content: center;
+//         margin: 0 auto;
+//     }
+//     .education .btn {
+//         margin: 0 auto;
+//     }
+// }
+// @media screen and (max-width: 400px) {
+//     .forestBuggy {
+//         display: none;
+//     }
+//     .education .title-dark {
+//         font-size: 18px;
+//         margin: 18px 0;
+//         text-align: center;
+//     }
+//     .content {
+//         margin: 0 auto;
+//         padding: 0 0 50px 0;
+//         align-content: center;
+//     }
+//     .education {
+//         display: flex;
+//         flex-direction: column;
+//     }
+//     .education_block_img {
+//         display: block;
+//         margin: 0 auto;
+//         width: 30px;
+//     }
+//     .education .description-dark {
+//         text-align: justify;
+//         font-size: 14px;
+//         line-height: 1.3;
+//         margin: 8px 0 52px;
+//     }
+//     .btn {
+//         padding: 10px 28px;
+//         font-size: 14px;
+//         display: block;
+//         margin: 70px auto;
+//     }
+//     .education {
+//         height: 299px;
+//         align-content: center;
+//         margin: 0 auto;
+//     }
+//     .education .btn {
+//         margin: 0 auto;
+//     }
+//     .footer-bg {
+//         padding: 30px 0;
+//     }
+//     .btn-form {
+//         margin-bottom: 40px;
+//     }
+//     .block_img {
+//         display: block;
+//         margin: 0 auto;
+//     }
+//     .main .description {
+//         text-align: justify;
+//     }
+// }
